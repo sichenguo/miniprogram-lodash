@@ -1,13 +1,14 @@
-language: JavaScript
-cache: yarn
-install: yarn
+language: node_js
+node_js:
+  - 14
 before_deploy: npm run build
-# deploy: 
-#   provider: npm
-#   email: $EMAIL_ADDRESS
-#   skip_cleanup: true
-#   api_key: $AUTH_TOKEN
-#   on: 
-#     tags: true
-#     branch: main
-#   tag: latest
+deploy:
+  provider: npm
+  email: $EMAIL_ADDRESS
+  skip_cleanup: true
+  api_key: $AUTH_TOKEN
+  on:
+    tags: true
+    branch: main
+  tag: latest
+  condition: "TRAVISTAG= v[0−9]+.[0−9]+.[0−9]+"
