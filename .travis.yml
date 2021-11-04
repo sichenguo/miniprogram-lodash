@@ -8,7 +8,7 @@ deploy:
   provider: npm
   email: $EMAIL_ADDRESS
   skip_cleanup: true
-  api_key: $AUTH_TOKEN
+  api_token: $AUTH_TOKEN
   on:
     tags: true
     branch: main
