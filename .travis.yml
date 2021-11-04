@@ -1,6 +1,8 @@
 language: node_js
 node_js:
   - 14
+cache: yarn
+install: yarn
 before_deploy: npm run build
 deploy:
   provider: npm
@@ -11,4 +13,3 @@ deploy:
     tags: true
     branch: main
   tag: latest
-  condition: "TRAVISTAG= v[0−9]+.[0−9]+.[0−9]+"
