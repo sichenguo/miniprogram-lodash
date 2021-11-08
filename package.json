@@ -1,6 +1,6 @@
 {
   "name": "@comall/miniprogram-lodash-polyfill",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "description": "小程序版 lodash-polyfill",
   "main": "lib/index.js",
   "types": "types/index.d.ts",
